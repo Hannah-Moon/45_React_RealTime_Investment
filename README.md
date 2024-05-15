@@ -43,24 +43,9 @@ Explore the CoinGecko API at www.coingecko.com/en/api.
 
 ## Encountered Error
 
-The makeStyles function is deprecated. To address this, create a separate CSS file.
+1. I used the makeStyles from MUI but learned that the `makeStyles` function is deprecated. To address this, create a separate CSS file.
 
-```
-import { makeStyles } from "@mui/styles";
-
-const useStyles = makeStyles(() => ({
-  App: {
-    backgroundColor: "#14161a",
-    color: "white",
-    minHeight: "100vh",
-  },
-}));
-
-const classes = useStyles();
-
-```
-
-Also, import the useNavigate hook from "react-router-dom".
+2. Also, import the import `useHistory` hook was deprecated, so I usued `useNavigation` instead.
 
 ## Credits
 
