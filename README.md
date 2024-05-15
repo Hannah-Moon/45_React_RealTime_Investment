@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# React Router - Pages Mockup
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Why Use React-Router?
 
-## Available Scripts
+React Router is a vital tool in React development, facilitating seamless navigation between different pages within a web application. It enables the creation of sophisticated websites with multiple pages while maintaining the underlying structure of a single-page application. When users interact with links or buttons to navigate, React Router dynamically updates the content on the screen without reloading the entire page from the internet. This enhances the user experience, making it smooth and intuitive.
 
-In the project directory, you can run:
+## Implementation Steps
 
-### `npm start`
+### 1. Prepare the Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+$ npx create-react-app react-router-realtimepayment
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2. Install the Router Library
 
-### `npm test`
+```
+$ npm i react-router-dom
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 3. Import Route and Routes in `app.js`
 
-### `npm run build`
+```
+import { Route, Routes } from "react-router-dom";
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 4. Install Material UI v4
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+$ npm install @mui/material @emotion/react @emotion/styled
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 5. Install styled-components and lab
 
-### `npm run eject`
+```
+$ npm i @mui/material @mui/styled-engine-sc styled-components
+$ npm i @mui/lab @mui/material
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## API Reference
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Explore the CoinGecko API at www.coingecko.com/en/api.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Encountered Error
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The makeStyles function is deprecated. To address this, create a separate CSS file.
 
-## Learn More
+```
+import { makeStyles } from "@mui/styles";
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+const useStyles = makeStyles(() => ({
+  App: {
+    backgroundColor: "#14161a",
+    color: "white",
+    minHeight: "100vh",
+  },
+}));
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+const classes = useStyles();
 
-### Code Splitting
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Also, import the useNavigate hook from "react-router-dom".
 
-### Analyzing the Bundle Size
+## Credits
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Photo by fabio on Unsplash
+- BannerBackground01 Photo by Shubham Dhage on Unsplash
 
-### Making a Progressive Web App
+## Getting Started with Create React App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- This project was bootstrapped with Create React App.
