@@ -1,17 +1,17 @@
-# React `Router`: Build your investment
+# React `Router`: Build Your Investment
 
-- This project is a crypto currency review app with a realtime API.
-- Users can review the crypto currency price in USD, EUR, and KRW.
+- This project is a cryptocurrency review app with a realtime API.
+- Users can review cryptocurrency prices in USD, EUR, and KRW.
 
-<img alt='screen capture' src="/assets/realTime.gif"></div>
+<img alt='screen capture' src="/assets/realTime.gif">
 
-## Why we use React-Router?
+## Why Use React Router?
 
 React Router is a vital tool in React development, facilitating seamless navigation between different pages within a web application. It enables the creation of sophisticated websites with multiple pages while maintaining the underlying structure of a single-page application. When users interact with links or buttons to navigate, React Router dynamically updates the content on the screen without reloading the entire page from the internet. This enhances the user experience, making it smooth and intuitive.
 
 ## Implementation Steps
 
-### 0. Install extension
+### 0. Install Extension
 
 - ES7 React/Redux/GraphQL/React-Native
 
@@ -47,7 +47,7 @@ $ npm i @mui/material @mui/styled-engine-sc styled-components
 $ npm i @mui/lab @mui/material
 ```
 
-### 5. Intall react-alice-carousel and tailwind
+### 6. Intall react-alice-carousel and tailwind
 
 npm i react-alice-carousel
 npm install -D tailwindcss
@@ -62,6 +62,12 @@ Explore the CoinGecko API at www.coingecko.com/en/api. It is completely free.
 1. I used the makeStyles from MUI but learned that the `makeStyles` function is deprecated. To address this, create a separate CSS file.
 
 2. Also, import the import `useHistory` hook was deprecated, so I usued `useNavigation` instead.
+
+3. CoinGecko API is being blocked by the CORS policy. Installing cores-anywhere resolved the problem.
+
+```
+npx cors-anywhere
+```
 
 ## Credits
 
