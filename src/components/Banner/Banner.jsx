@@ -1,6 +1,5 @@
 import React from "react";
 import { Container } from "@mui/system";
-import "./Banner.css";
 import { Typography } from "@mui/material";
 import Carousel from "./Carousel";
 

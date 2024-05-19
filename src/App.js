@@ -11,7 +11,7 @@ export default function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} exact />
           <Route path="/coins/:id" element={<CoinPage />} />
         </Routes>
       </div>
