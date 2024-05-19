@@ -19,13 +19,18 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
+// ------------ [ number with commas ]
+export function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 const CoinsTable = () => {
   const [coins, setCoins] = useState([]);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
   const [error, setError] = useState(null);
-  const { currency } = CryptoState();
+  const { currency, symbol } = CryptoState();
   const navigate = useNavigate();
 
   const fetchCoins = async () => {
@@ -142,25 +147,42 @@ const CoinsTable = () => {
                           {/* <div style{{display: "flex", flexDirection:"column"}}>
                         <span={{textTransform: "uppercase",frontSize: 22,}}
                         </div> */}
-                          <div>
-                            <span>{row.name}</span>
-                            <span>{row.symbol.toUpperCase()}</span>
+                          <div
+                            style={{ display: "flex", flexDirection: "column" }}
+                          >
+                            <span
+                              style={{
+                                textTransform: "uppercase",
+                                fontSize: 22,
+                              }}
+                            >
+                              {row.symbol.toUpperCase()}
+                            </span>
+
+                            <span style={{ color: "darkgrey" }}>
+                              {row.name}
+                            </span>
                           </div>
                         </StyledTableCell>
                         <StyledTableCell align="right">
-                          {row.current_price.toFixed(2)}
+                          {symbol}{" "}
+                          {numberWithCommas(row.current_price.toFixed(2))}
                         </StyledTableCell>
                         <StyledTableCell
                           align="right"
-                          style={{ color: profit ? "green" : "red" }}
+                          style={{ color: profit > 0 ? "green" : "red" }}
                         >
                           {profit && "+"}
                           {row.price_change_percentage_24h.toFixed(2)}%
                         </StyledTableCell>
                         <StyledTableCell align="right">
-                          {row.market_cap
+                          {/* {row.market_cap
                             .toString()
-                            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} */}
+                          {symbol}{" "}
+                          {numberWithCommas(
+                            row.market_cap.toString().slice(0, -6)
+                          )}
                         </StyledTableCell>
                       </StyledTableRow>
                     );

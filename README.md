@@ -1,7 +1,7 @@
-# 🔄 React `Router`: Build Your Investment
+# 🔄 React `Router`: Read Time Investment
 
 - This project is a cryptocurrency review app with a realtime API.
-- Users can review cryptocurrency prices in USD, EUR, and KRW.
+- Users can review cryptocurrency prices in USD, EUR, KRW, JPY, and GBP.
 
 <img alt='screen capture' src="/assets/realTime.gif">
 
