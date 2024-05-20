@@ -5,6 +5,9 @@
 
 <img alt='screen capture' src="/assets/realTime.gif">
 
+🎬 Live Demo
+The app is deployed. Please visit https://realtimeinvestment.netlify.app/ to explore Real-Time investment.
+
 ## ❓ Why Use React Router?
 
 React Router is a vital tool in React development, facilitating seamless navigation between different pages within a web application. It enables the creation of sophisticated websites with multiple pages while maintaining the underlying structure of a single-page application. When users interact with links or buttons to navigate, React Router dynamically updates the content on the screen without reloading the entire page from the internet. This enhances the user experience, making it smooth and intuitive.
