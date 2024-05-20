@@ -1,16 +1,17 @@
+/* Common styles */
+body,
+html {
+  margin: 0; /* Reset default margins */
+  padding: 0; /* Reset default padding */
+}
+
 .container {
   display: flex;
   flex-direction: row;
+  width: 100%; /* Ensure the container takes up the full width */
 }
 
-@media (max-width: 960px) {
-  /* Assuming md breakpoint is 960px */
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
+/* Sidebar styles */
 .sidebar {
   width: 30%;
   display: flex;
@@ -22,13 +23,18 @@
   border-right: 1px solid grey;
 }
 
+/* Media queries */
 @media (max-width: 960px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .sidebar {
     width: 100%;
+    border-right: none;
   }
-}
 
-@media (max-width: 960px) {
   .marketData {
     display: flex;
     justify-content: space-around;
@@ -50,6 +56,7 @@
   }
 }
 
+/* Heading styles */
 .heading {
   font-weight: bold;
   margin-bottom: 20px;
@@ -59,6 +66,7 @@
   align-items: center;
 }
 
+/* Description styles */
 .description {
   width: 100%;
   font-family: "Montserrat", sans-serif;
@@ -68,8 +76,10 @@
   text-align: justify;
 }
 
+/* Market data styles */
 .marketData {
   display: flex;
+  justify-content: space-around;
   align-self: start;
   padding: 25px;
   padding-top: 10px;
@@ -79,7 +89,7 @@
   align-items: center;
 }
 
-/* .lineChart {
-  display: flex;
-  flex-direction: column;
-} */
+/* Line chart styles */
+.lineChart {
+  width: 70%;
+}
