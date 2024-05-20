@@ -8,15 +8,18 @@
   font-weight: 400;
   background-color: transparent;
   color: inherit;
+  display: flex;
+  justify-content: center;
 }
 
 .selectbutton.selected {
   background-color: lime;
-  color: black;
+  color: #000;
   font-weight: 600;
 }
 
 .selectbutton:hover {
-  background-color: lime;
-  color: black;
+  background-color: transparent;
+  color: lime;
+  font-weight: 700;
 }

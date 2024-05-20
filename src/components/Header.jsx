@@ -45,7 +45,7 @@ function Header() {
                 fontFamily: "Montserrat",
               }}
             >
-              Realtime Investment
+              Real-time Investment
             </Typography>
 
             <InputLabel id="demo-simple-select-label"></InputLabel>

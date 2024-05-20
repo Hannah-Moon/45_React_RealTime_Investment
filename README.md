@@ -56,13 +56,13 @@ npx tailwindcss init
 
 ```
 
-### 7. Install html-react-parser
+### 7️⃣ Install html-react-parser
 
 ```
 npm install html-react-parser
 ```
 
-### 8. Install 'react-chartjs-2' chart.js for graph
+### 8️⃣ Install 'react-chartjs-2' chart.js for graph
 
 ```
 npm i react-chartjs-2 chart.js

@@ -1,5 +1,17 @@
+/* Common styles */
+body,
+html {
+  margin: 0; /* Reset default margins */
+  padding: 0; /* Reset default padding */
+}
+
 .container {
-  width: 75%;
+  display: flex;
+  flex-direction: row;
+  width: 100%; /* Ensure the container takes up the full width */
+}
+.chartContainer {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -8,7 +8,7 @@ import { chartDays } from "../config/data";
 import { CryptoState } from "../CryptoContext";
 import "./CoinInfo.css";
 
-// ---------- Import chart category / Register necessary scale
+// ---------- Import chart category from "chart.js" / Register necessary scale
 import {
   Chart,
   CategoryScale,
@@ -55,67 +55,69 @@ const CoinInfo = ({ coin }) => {
 
   return (
     <ThemeProvider theme={darkTheme}>
-      <div className="container">
-        {!historicData | (flag === false) ? (
-          <CircularProgress
-            circle
-            colorPrimary
-            style={{ color: "lime" }}
-            size={250}
-            thickness={1}
-          />
-        ) : (
-          <>
-            <Line
-              data={{
-                labels: historicData.map((coin) => {
-                  let date = new Date(coin[0]);
-                  let time =
-                    date.getHours() > 12
-                      ? `${date.getHours() - 12}:${date.getMinutes()} PM`
-                      : `${date.getHours()}:${date.getMinutes()} AM`;
-                  return days === 1 ? time : date.toLocaleDateString();
-                }),
-
-                datasets: [
-                  {
-                    data: historicData.map((coin) => coin[1]),
-                    label: `Price ( Past ${days} Days ) in ${currency}`,
-                    borderColor: "lime",
-                  },
-                ],
-              }}
-              options={{
-                elements: {
-                  point: {
-                    radius: 1,
-                  },
-                },
-              }}
+      <div className="Container">
+        <div className="chartContainer">
+          {!historicData | (flag === false) ? (
+            <CircularProgress
+              circle
+              colorPrimary
+              style={{ color: "lime" }}
+              size={250}
+              thickness={1}
             />
-            <div
-              style={{
-                display: "flex",
-                marginTop: 20,
-                justifyContent: "space-around",
-                width: "100%",
-              }}
-            >
-              {chartDays.map((day) => (
-                <SelectButton
-                  key={day.value}
-                  onClick={() => {
-                    setDays(day.value);
-                    setflag(false);
-                  }}
-                  selected={day.value === days}
-                >
-                  {day.label}
-                </SelectButton>
-              ))}
-            </div>
-          </>
-        )}
+          ) : (
+            <>
+              <Line
+                data={{
+                  labels: historicData.map((coin) => {
+                    let date = new Date(coin[0]);
+                    let time =
+                      date.getHours() > 12
+                        ? `${date.getHours() - 12}:${date.getMinutes()} PM`
+                        : `${date.getHours()}:${date.getMinutes()} AM`;
+                    return days === 1 ? time : date.toLocaleDateString();
+                  }),
+
+                  datasets: [
+                    {
+                      data: historicData.map((coin) => coin[1]),
+                      label: `Price ( Past ${days} Days ) in ${currency}`,
+                      borderColor: "lime",
+                    },
+                  ],
+                }}
+                options={{
+                  elements: {
+                    point: {
+                      radius: 2,
+                    },
+                  },
+                }}
+              />
+              <div
+                style={{
+                  display: "flex",
+                  marginTop: 20,
+                  justifyContent: "space-around",
+                  width: "100%",
+                }}
+              >
+                {chartDays.map((day) => (
+                  <SelectButton
+                    key={day.value}
+                    onClick={() => {
+                      setDays(day.value);
+                      setflag(false);
+                    }}
+                    selected={day.value === days}
+                  >
+                    {day.label}
+                  </SelectButton>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
       </div>
     </ThemeProvider>
   );
