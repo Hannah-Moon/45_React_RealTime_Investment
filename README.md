@@ -87,7 +87,7 @@ npx cors-anywhere
 ## 🎖️ Credits
 
 - Photo by fabio on Unsplash
-- # BannerBackground01 Photo by Shubham Dhage on Unsplash
+- BannerBackground01 Photo by Shubham Dhage on Unsplash
 
 ## 📝 Takeaway
 
