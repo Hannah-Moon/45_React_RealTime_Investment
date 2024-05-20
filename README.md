@@ -70,7 +70,7 @@ npm i react-chartjs-2 chart.js
 
 ## 📚 API Reference
 
-All my end points are from www.coingecko.com/en/api.
+- All my end points are from www.coingecko.com/en/api.
 
 ## ❗ Encountered Error and issues
 
@@ -89,9 +89,10 @@ npx cors-anywhere
 - Photo by fabio on Unsplash
 - BannerBackground01 Photo by Shubham Dhage on Unsplash
 
-## 📝 Takeaway
+## 📝 Roadblocks
 
-- Using mixtures of css, tailwind, and mui of better styling
+- I've encountered frequent Axios fetch errors using the free API. For future enhancement, purchasing a paid API would solve the problem.
+- Using a mixture of CSS, Tailwind, and MUI was tricky but it definitely gave me full freedom to design better styling.
 
 ## 🚀 React App
 
