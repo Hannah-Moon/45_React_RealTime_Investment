@@ -1,0 +1,85 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 960px) {
+  /* Assuming md breakpoint is 960px */
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.sidebar {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-right: 1px solid grey;
+}
+
+@media (max-width: 960px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 960px) {
+  .marketData {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Assuming sm breakpoint is 600px */
+  .marketData {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 400px) {
+  /* Assuming xs breakpoint is 400px */
+  .marketData {
+    align-items: start;
+  }
+}
+
+.heading {
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description {
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  padding: 25px;
+  padding-bottom: 15px;
+  padding-top: 0;
+  text-align: justify;
+}
+
+.marketData {
+  display: flex;
+  align-self: start;
+  padding: 25px;
+  padding-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .lineChart {
+  display: flex;
+  flex-direction: column;
+} */

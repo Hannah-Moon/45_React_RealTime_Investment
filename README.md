@@ -56,9 +56,21 @@ npx tailwindcss init
 
 ```
 
+### 7. Install html-react-parser
+
+```
+npm install html-react-parser
+```
+
+### 8. Install 'react-chartjs-2' chart.js for graph
+
+```
+npm i react-chartjs-2 chart.js
+```
+
 ## 📚 API Reference
 
-Explore the CoinGecko API at www.coingecko.com/en/api. It is completely free.
+All my end points are from www.coingecko.com/en/api.
 
 ## ❗ Encountered Error and issues
 
@@ -75,12 +87,12 @@ npx cors-anywhere
 ## 🎖️ Credits
 
 - Photo by fabio on Unsplash
-- BannerBackground01 Photo by Shubham Dhage on Unsplash
+- # BannerBackground01 Photo by Shubham Dhage on Unsplash
 
 ## 📝 Takeaway
 
 - Using mixtures of css, tailwind, and mui of better styling
 
-## 🚀 Getting Started with Create React App
+## 🚀 React App
 
 - This project was bootstrapped with Create React App.

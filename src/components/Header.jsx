@@ -26,7 +26,7 @@ function Header() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <main>This app is using the dark mode</main>
+      {/* <main>This app is using the dark mode</main> */}
       <AppBar color="transparent" position="static">
         {/* Make components inside of the container responsive */}
         <Container>
@@ -34,7 +34,8 @@ function Header() {
             <Typography
               onClick={() => {
                 console.log("Clicked");
-                navigate("/HomePage");
+                // navigate("/HomePage");
+                navigate("/");
               }}
               className="title"
               variant="h5"

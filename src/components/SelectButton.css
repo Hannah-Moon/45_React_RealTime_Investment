@@ -1,0 +1,22 @@
+.selectbutton {
+  border: 1px solid lime;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  width: 22%;
+  font-weight: 500;
+  background-color: transparent;
+  color: inherit;
+}
+
+.selectbutton.selected {
+  background-color: lime;
+  color: black;
+  font-weight: 700;
+}
+
+.selectbutton:hover {
+  background-color: lime;
+  color: black;
+}

@@ -6,7 +6,12 @@ import { CoinList } from "../config/api";
 // ------------ [ MUI ]
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Container } from "@mui/system";
-import { TextField, Typography, LinearProgress } from "@mui/material";
+import {
+  TextField,
+  Typography,
+  LinearProgress,
+  Pagination,
+} from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 // ------------ [ Table MUI ]
@@ -48,6 +53,7 @@ const CoinsTable = () => {
 
   useEffect(() => {
     fetchCoins();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currency]);
 
   const darkTheme = createTheme({
@@ -111,7 +117,10 @@ const CoinsTable = () => {
             </Typography>
           ) : (
             <Table sx={{ minWidth: 700 }} aria-label="customized table">
-              <TableHead style={{ backgroundColor: "lime" }}>
+              <TableHead
+                style={{ backgroundColor: "lime" }}
+                className="tableHead"
+              >
                 <TableRow>
                   <StyledTableCell>Coin</StyledTableCell>
                   <StyledTableCell align="right">Price</StyledTableCell>
@@ -121,13 +130,14 @@ const CoinsTable = () => {
               </TableHead>
               <TableBody>
                 {handleSearch()
+                  // Set-up for pagenation: Slice the page to show only 10 items per page
                   .slice((page - 1) * 10, (page - 1) * 10 + 10)
                   .map((row) => {
                     const profit = row.price_change_percentage_24h > 0;
                     return (
                       <StyledTableRow
-                        onClick={() => navigate.push(`/coins/${row.id}`)}
-                        className={row}
+                        onClick={() => navigate(`/coins/${row.id}`)}
+                        className="row"
                         key={row.name}
                       >
                         <StyledTableCell
@@ -191,6 +201,21 @@ const CoinsTable = () => {
             </Table>
           )}
         </TableContainer>
+        <Pagination
+          count={Math.ceil(handleSearch().length / 10)}
+          style={{
+            padding: 20,
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+          }}
+          page={page}
+          onChange={(_, value) => {
+            setPage(value);
+            window.scrollTo(0, 450);
+          }}
+          className="pagination"
+        />
       </Container>
     </ThemeProvider>
   );
