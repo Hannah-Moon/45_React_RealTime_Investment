@@ -5,7 +5,8 @@
 
 <img alt='screen capture' src="/assets/realTime.gif">
 
-🎬 Live Demo
+## 🎬 Live Demo
+
 The app is deployed. Please visit https://realtimeinvestment.netlify.app/ to explore Real-Time investment.
 
 ## ❓ Why Use React Router?
