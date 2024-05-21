@@ -3,11 +3,10 @@
 - This project is a cryptocurrency review app with a realtime API.
 - Users can review cryptocurrency prices in USD, EUR, KRW, JPY, and GBP.
 
-<img alt='screen capture' src="/assets/realTime.gif">
-
 ## 🎬 Live Demo
 
 The app is deployed. Please visit https://realtimeinvestment.netlify.app/ to explore Real-Time investment.
+<img alt='screen capture' src="/assets/realTime.gif">
 
 ## ❓ Why Use React Router?
 
@@ -76,27 +75,35 @@ npm i react-chartjs-2 chart.js
 
 - All my end points are from www.coingecko.com/en/api.
 
-## ❗ Encountered Error and issues
+## 🛑 Roadblocks
 
-1. I used the makeStyles from MUI but learned that the makeStyles function is deprecated. To address this, create a separate CSS file.
+1. **Deprecated `makeStyles` from MUI**:
 
-2. Also, import the import useHistory hook was deprecated, so I used useNavigation instead.
+   - I initially used the `makeStyles` function from MUI but learned that it is deprecated. To address this issue, I created a separate CSS file for styling.
 
-3. CoinGecko API is being blocked by the CORS policy. Installing cores-anywhere resolved the problem.
+2. **Deprecated `useHistory` Hook**:
 
-```
-npx cors-anywhere
-```
+   - The `useHistory` hook has been deprecated, so I replaced it with the `useNavigation` hook.
+
+3. **CoinGecko API and CORS Policy**:
+
+   - The CoinGecko API was being blocked by the CORS policy. To resolve this issue, I installed `cors-anywhere` using the following command:
+
+     ```bash
+     npx cors-anywhere
+     ```
+
+4. **Axios Fetch Errors**:
+
+   - I encountered frequent fetch errors using Axios with the free API. To enhance future functionality and reliability, purchasing a paid API is recommended.
+
+5. **Styling Challenges**:
+   - Combining CSS, Tailwind, and MUI for styling was challenging, but it provided full freedom to create better designs and styling.
 
 ## 🎖️ Credits
 
 - Photo by fabio on Unsplash
 - BannerBackground01 Photo by Shubham Dhage on Unsplash
-
-## 📝 Roadblocks
-
-- I've encountered frequent Axios fetch errors using the free API. For future enhancement, purchasing a paid API would solve the problem.
-- Using a mixture of CSS, Tailwind, and MUI was tricky but it definitely gave me full freedom to design better styling.
 
 ## 🚀 React App
 
