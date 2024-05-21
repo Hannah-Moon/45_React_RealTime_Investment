@@ -14,35 +14,35 @@ React Router is a vital tool in React development, facilitating seamless navigat
 
 ## 🛠️ Implementation Steps
 
-### 0️⃣ Install Extension
+#### 0️⃣ Install Extension
 
 - ES7 React/Redux/GraphQL/React-Native
 
-### 1️⃣ Prepare the Project
+#### 1️⃣ Prepare the Project
 
 ```bash
 $ npx create-react-app react-router-realtimepayment
 ```
 
-### 2️⃣ Install the Router Library
+#### 2️⃣ Install the Router Library
 
 ```
 $ npm i react-router-dom
 ```
 
-### 3️⃣ Import Route and Routes in app.js
+#### 3️⃣ Import Route and Routes in app.js
 
 ```
 import { Route, Routes } from "react-router-dom";
 ```
 
-### 4️⃣ Install Material UI
+#### 4️⃣ Install Material UI
 
 ```
 $ npm install @mui/material @emotion/react @emotion/styled
 ```
 
-### 5️⃣ Install styled-components and lab
+#### 5️⃣ Install styled-components and lab
 
 ```
 $ npm i @material-ui/core
@@ -50,25 +50,25 @@ $ npm i @mui/material @mui/styled-engine-sc styled-components
 $ npm i @mui/lab @mui/material
 ```
 
-### 6️⃣ Install react-alice-carousel and tailwind
+#### 6️⃣ Install react-alice-carousel and tailwind
 
 ```
-npm i react-alice-carousel
-npm install -D tailwindcss
-npx tailwindcss init
+$ npm i react-alice-carousel
+$ npm install -D tailwindcss
+$ npx tailwindcss init
 
 ```
 
-### 7️⃣ Install html-react-parser
+#### 7️⃣ Install html-react-parser
 
 ```
-npm install html-react-parser
+$ npm install html-react-parser
 ```
 
-### 8️⃣ Install 'react-chartjs-2' chart.js for graph
+#### 8️⃣ Install 'react-chartjs-2' chart.js for graph
 
 ```
-npm i react-chartjs-2 chart.js
+$ npm i react-chartjs-2 chart.js
 ```
 
 ## 📚 API Reference
@@ -77,28 +77,19 @@ npm i react-chartjs-2 chart.js
 
 ## 🛑 Roadblocks
 
-1. **Deprecated `makeStyles` from MUI**:
+1. **Deprecated `makeStyles` from MUI**: I initially used the `makeStyles` function from MUI but learned that it is deprecated. To address this issue, I created a separate CSS file for styling.
 
-   - I initially used the `makeStyles` function from MUI but learned that it is deprecated. To address this issue, I created a separate CSS file for styling.
+2. **Deprecated `useHistory` Hook**: The `useHistory` hook has been deprecated, so I replaced it with the `useNavigation` hook.
 
-2. **Deprecated `useHistory` Hook**:
+3. **CoinGecko API and CORS Policy**: The CoinGecko API was being blocked by the CORS policy. To resolve this issue, I installed `cors-anywhere` using the following command:
 
-   - The `useHistory` hook has been deprecated, so I replaced it with the `useNavigation` hook.
+   ```bash
+   npx cors-anywhere
+   ```
 
-3. **CoinGecko API and CORS Policy**:
+4. **Axios Fetch Errors**: I encountered frequent fetch errors using Axios with the free API. To enhance future functionality and reliability, I will consider to purchase a paid API.
 
-   - The CoinGecko API was being blocked by the CORS policy. To resolve this issue, I installed `cors-anywhere` using the following command:
-
-     ```bash
-     npx cors-anywhere
-     ```
-
-4. **Axios Fetch Errors**:
-
-   - I encountered frequent fetch errors using Axios with the free API. To enhance future functionality and reliability, purchasing a paid API is recommended.
-
-5. **Styling Challenges**:
-   - Combining CSS, Tailwind, and MUI for styling was challenging, but it provided full freedom to create better designs and styling.
+5. **Styling Challenges**: Combining CSS, Tailwind, and MUI for styling was challenging, but it provided full freedom to create better designs and styling.
 
 ## 🎖️ Credits
 
