@@ -1,6 +1,6 @@
 # 🔄 React `Router`: Read Time Investment
 
-- This project is a cryptocurrency review app with a realtime API.
+- This project is a cryptocurrency review app with a real-time API.
 - Users can review cryptocurrency prices in USD, EUR, KRW, JPY, and GBP.
 
 ## 🎬 Live Demo
@@ -87,15 +87,16 @@ $ npm i react-chartjs-2 chart.js
    npx cors-anywhere
    ```
 
-4. **Axios Fetch Errors**: I encountered frequent fetch errors using Axios with the free API. To enhance future functionality and reliability, I will consider to purchase a paid API.
+4. **Axios Fetch Errors**: I encountered frequent fetch errors using Axios with the free API. To enhance future functionality and reliability, I will consider purchasing a paid API.
 
 5. **Styling Challenges**: Combining CSS, Tailwind, and MUI for styling was challenging, but it provided full freedom to create better designs and styling.
 
-## 🎖️ Credits
+## 🎖️ Credits and reference 
 
 - Photo by fabio on Unsplash
 - BannerBackground01 Photo by Shubham Dhage on Unsplash
-
+- Cryptocurrency Tracker with React JS, Material UI, and Chart JS by @roadsidecoder via @YouTube
+  
 ## 🚀 React App
 
 - This project was bootstrapped with Create React App.
